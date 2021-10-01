@@ -14,7 +14,6 @@ function App() {
     const todoInstance = new Todo(enteredTodo)
     todosCopy.push(todoInstance);
     setTodos(todosCopy)
-    console.log({todosCopy, todos})
     // setTodos(prevTodos => prevTodos.concat(todoInstance))
   }
   const removeTodo = (id: string) => {
@@ -26,7 +25,6 @@ function App() {
       return todo.id !== id;
     }))
   }
-  console.log({todos}, 'asdfasdfhah');
   return (
     <div className="App">
       <NewTodo onTodoAdded={onTodoAdded}/>
